@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #E3FAFF;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+}
+
+.mission,
+.photos,
+.testimonial,
+.meetup {
+  margin: 4rem auto;
+}
+
+
+/* Nav */
+nav {
+  background-color: #007994;
+  padding-top: 1rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  margin-right: 1.5rem;
+  color: #E3FAFF;
+  font-size: 1.5rem;
+}
+
+/* Intro */
+.intro {
+  height: 30rem;
+  background-image: url('./images/swimming-pool-3.jpg');
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.line {
+  background-color: #08b0dd;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line h1 {
+  color: #E3FAFF;
+  font-size: 2.5rem;
+  padding: 2.5rem;
+}
+
+/* Mission */
+#mission h2 {
+  color: #a3a803;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 18.8%);
+  width: 90%;
+  gap: 1.5%;
+  margin: 1em auto;
+}
+
+.box {
+  padding: 1rem;
+}
+
+.box:nth-child(1),
+.box:nth-child(3),
+.box:nth-child(5) {
+  background-color: #0D78AA;
+  opacity: 0.5;
+}
+
+.box:nth-child(2),
+.box:nth-child(4) {
+  background-color: #08b0dd;
+  opacity: 0.5;
+}
+
+.box h4 {
+  color: #E3FAFF;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Testimonial */
+.testimonial {
+  background-color: #0D78AA;
+  height: 20rem;
+  color: #a3a803;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial h2 {
+  font-size: 2.3rem;
+  color: #a3a803;
+}
+
+
+/* Photos */
+.photos img {
+  width: 30%;
+  margin: 1.5%;
+}
+
+/* Meetup */
+.meetup {
+  margin-bottom: 2rem;
+}
+/* this is a typical process to center an image */
+.meetup img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.meetup h1 {
+  text-align: center;
+  color: #a3a803;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1024px){
+  .photos img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 32.3%);
+    gap: 1.5%;
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .testimonial h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .intro h1 {
+    margin-top: 2rem;
+  }
+
+  /* .intro {
+    max-height: 200px;
+  } */
+
+  .photos img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 32.3%);
+    gap: 1.5%;
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .container h4 {
+    font-size: 1rem;
+  }
+
+  .line h1 {
+    font-size: 1.8rem;
+  }
+
+  .testimonial h2 {
+    font-size: 1.5rem;
+  }
+
+  #mission h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .meetup h1 {
+    font-size: 1.8rem;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
+  .container {
+    grid-template-columns: repeat(1, 100%);
+    /* width: 80%; */
+    row-gap: 1rem;
+    margin: 1rem auto;
+  }
+
+  .container h4 {
+    font-size: 1.3rem;
+  }
+
+  .testimonial h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .testimonial h2 {
+    font-size: 1rem;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+
+  .photos img {
+    width: 100%;
+  }
+
+  .container {
+    grid-template-columns: repeat(1, 100%);
+    /* width: 100%; */
+    margin: 1rem auto;
+    gap: 0.5rem;
+  }
+
+  .line h1 {
+    font-size: 1.3rem;
+  }
+
+  #mission h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .meetup h1 {
+    font-size: 1.5rem;
+  }
+}
